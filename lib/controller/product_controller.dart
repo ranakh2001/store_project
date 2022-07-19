@@ -33,7 +33,8 @@ class ProductController extends GetxController {
 
 
 
-  Future<bool> onLikeButtonTapped(bool isLiked) async {
+  Future<bool>  onLikeButtonTapped(bool isLiked, ProductModel product) async {
+    // todo: add/remove product from liked list
     return !isLiked;
   }
   

@@ -8,6 +8,7 @@ import 'model/product_model.dart';
 class ProductView extends StatelessWidget {
   ProductController controller = Get.find();
   final ProductModel product;
+
   ProductView({
     required this.product,
     Key? key,
@@ -84,7 +85,8 @@ class ProductView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       LikeButton(
-                        onTap: controller.onLikeButtonTapped,
+                        onTap: (isLiked) =>
+                            controller.onLikeButtonTapped(isLiked, product),
                       ),
                       ElevatedButton(
                         onPressed: () {
