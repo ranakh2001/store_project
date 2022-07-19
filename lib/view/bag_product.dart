@@ -83,7 +83,8 @@ class BagProduct extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       LikeButton(
-                        onTap: controller.onLikeButtonTapped,
+                        onTap: (isLiked) =>
+                            controller.onLikeButtonTapped(isLiked, product),
                       ),
                     ],
                   ),
